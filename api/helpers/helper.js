@@ -71,7 +71,7 @@ Email(email) {
   let thisNode = this.head;
   while (thisNode) {
   if (thisNode.data.email === email) return  thisNode.data ;
-  thisNode = thisnode.next;
+  thisNode = thisNode.next;
   }
   return false;
 }

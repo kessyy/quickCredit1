@@ -1,7 +1,7 @@
 const config = require('../helpers/config')
 const {Token, hashPassword, comparePassword}  = require('./validate');
 const { validateSignUp, validateLogIn } = require('./validate');
-const { newUser, newRepayment } = require('../helpers/helper');
+const { newUser, newRepayment, Loan } = require('../helpers/helper');
 
  let id = 1;
  let data;
@@ -17,7 +17,7 @@ const {
 } = req.body;
 
 const checkEmail = newUser.Email(email);
-  if (thisNode.data) {
+  if (newUser.Email) {
     res.status(422).json({ status: 422, error: 'email already exists' });
     return;
   }
