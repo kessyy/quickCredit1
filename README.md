@@ -1,4 +1,6 @@
 # quickCredit
+
+[![Build Status](https://travis-ci.org/kessyy/quickCredit1.svg?branch=develop)](https://travis-ci.org/kessyy/quickCredit1)
 Quick Credit is an online lending platform that provides short term 
 soft loans to individuals. This helps solve problems of financial inclusion as a 
 way to alleviate poverty and empower low income earners 
@@ -34,6 +36,11 @@ This site is published at https://kessyy.github.io/quickCredit/UI/index.html
 <li>Admin can view all repaid loans</li>
 </ul>
 <br><br>
+<strong>Installation</strong><br>
+Git clone this project https://github.com/kessyy/quickCredit1.git <br>
+Download and install node_js<br>
+In terminal run npm install
+<br>
 <strong>Credit</strong><br>
 https://medium.freecodecamp.org/data-structures-101-linked-lists-254c82cf5883 <br>
 https://medium.com/front-end-weekly/data-structures-linked-list-implementation-in-js-3beb48ff49cd <br>
