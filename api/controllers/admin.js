@@ -12,17 +12,22 @@ const loanid = (req, res) => {
 const paid = (req, res) => {
     const { paid } = req.params;
     const Paid = Loan.paid();
-    if (!Paid) res.status(404).json({status: 404, message: 'no data found'});
-    else res.status(201)/json({status:201, data: paid});
+    //if (!Paid) res.status(404).json({status: 404, message: 'no data found'});
+     res.status(201)/json({status:201, data: paid});
 }
 //admin can view current not fully repaid loans
-const halfPaid = (req, res) => {
-    const { halfpaid } = req.params;
-    const notPaid = Loan.unpaid();
-    if (!notPaid) res.status(404).json({status: 404, error: 'no data found'});
-    else res.status(201)/json({status:201, data: halfpaid});
-}
 
+const halfPaid = (req, res) => {
+  const { halfpaid } = req.params;
+  const notPaid = Loan.unpaid();
+  if (notPaid) {
+    return res.status(200).json({
+      status: 201,
+      message: 'List of all loans that are not fully repaid',
+      notPaid,
+    });
+  } else res.status(404).json({status: 404, error: 'no data found'});
+}
 // admin veiw all users
 const users = (req, res) => {
   if (Object.keys(newUser).length > 0) {
