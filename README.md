@@ -1,6 +1,7 @@
 # quickCredit
 
-[![Build Status](https://travis-ci.org/kessyy/quickCredit1.svg?branch=develop)](https://travis-ci.org/kessyy/quickCredit1)<br>
+[![Build Status](https://travis-ci.org/kessyy/quickCredit1.svg?branch=develop)](https://travis-ci.org/kessyy/quickCredit1)
+[![Coverage Status](https://coveralls.io/repos/github/kessyy/quickCredit1/badge.svg?branch=develop)](https://coveralls.io/github/kessyy/quickCredit1?branch=develop)
 
 Quick Credit is an online lending platform that provides short term 
 soft loans to individuals. This helps solve problems of financial inclusion as a 

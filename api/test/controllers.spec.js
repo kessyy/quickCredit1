@@ -123,26 +123,4 @@ describe('All Routes', () => {
       })
       .catch(error => done(error));
   });
-
-  it('should verify a user', (done) => {
-    chai.request(app)
-      .patch('/api/v1/users/user@gmail.com/verify')
-      .then((res) => {
-        expect(res.status).to.be.equal(202);
-        expect(res.body).to.have.property('message');
-        done();
-      })
-      .catch(error => done(error));
-  });
-
-  it('should not verify a user successfully', (done) => {
-    chai.request(app)
-      .patch('/api/v1/users/user@gmail.com/verify')
-      .then((res) => {
-        expect(res.status).to.be.equal(404);
-        expect(res.body).to.have.property('error');
-        done();
-      })
-      .catch(error => done(error));
-  });
 });
