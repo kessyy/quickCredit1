@@ -16,7 +16,7 @@ const {
   firstName, lastName, email, address, password,
 } = req.body;
 
-const checkEmail = newUser.Email(email);
+const checkEmail = newUser.Email();
   if (newUser.Email) {
     res.status(422).json({ status: 422, error: 'email already exists' });
     return;

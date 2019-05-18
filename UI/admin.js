@@ -25,8 +25,8 @@ function myFunction() {
 
 
 document.getElementById("myBtn").addEventListener("click", function(button) {    
-  if (document.getElementById("all-loans").style.display === "none")
-        document.getElementById("all-loans").style.display = "block";
-  else document.getElementById("all-loans").style.display = "none";
+  if (document.getElementById("manage-loans").style.display === "none")
+        document.getElementById("manage-loans").style.display = "block";
+  else document.getElementById("manage-loans").style.display = "none";
 })
 }
