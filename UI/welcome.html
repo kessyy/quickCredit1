@@ -12,10 +12,22 @@
     <div class="header">
         <div class="menu">
             <a class ="mylink" href="index.html">Home</a>
-            <a class ="mylink" href="create-loan.html">Apply</a>
+            <a class ="mylink" href="#" onclick = "showform1()">Apply</a>
             <a class ="mylink" href="loan-history.html">Loan History</a>
         </div>
     </div>
+    <form id = "theform" style="display:none" method = "POST" 
+     onsubmit="return confirm('Do you want to submit the form?')">
+        <input type="number" name="amount" placeholder="loan amount" required/>
+        <input type="number" name="Instalment" placeholder="Enter instalment" required />
+        <input type="number" name="tenor" placeholder="tenor" required />
+        <input type="submit" name="submit" placeholder="submit">
+    </form>
+        <script type = "text/javascript">
+            function showform1() {
+             document.getElementById("theform").style.display = "block";
+           }
+           </script>
     <div id="Layer3">Dear User, welcome to quick credit. </br>
         How can we help you today?</br><br>
         <strong><i>Why did you choose us?</i></strong><br>

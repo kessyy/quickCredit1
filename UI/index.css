@@ -90,10 +90,39 @@ a:hover {
 #Layer8 {
     position: absolute;
     left: 700px;
-    top: 200px;
+    top: 300px;
     width: 350px;
     height: 300px;
 }
+input[type=number], select {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* box-sizing: border-box; */
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+#theform{
+    position:absolute;
+    position: right;
+    left:1100px;
+    top:20px;
+    width:200px;
+} 
 /* Media Responsive */
 @media screen and (max-width: 1050px) {
 .menu{
@@ -123,6 +152,7 @@ a:hover {
     left: 10px;
     top: 600px;
 }
+
 }
 
 @media screen and (max-width: 800px) {

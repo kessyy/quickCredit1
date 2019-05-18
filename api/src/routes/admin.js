@@ -9,7 +9,7 @@ router.get('/loan/:id',  adminController.loanid);
 //admin can view all users
 router.get('/users', adminController.users);
 
-//admin can view all loans
+//admin can view all paid loans
 router.get('/loans', adminController.loans);
 
 //admin can view all unpaid loans
