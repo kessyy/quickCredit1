@@ -10,10 +10,10 @@ router.get('/loan/:id',  adminController.loanid);
 router.get('/users', adminController.users);
 
 //admin can view all paid loans
-router.get('/loans', adminController.loans);
+router.get('/loans/paid', adminController.loans);
 
 //admin can view all unpaid loans
-router.get('/loans/payed', adminController.paid);
+router.get('/loans/unpaid', adminController.paid);
 
 //admin can view not fully repaid loans
 router.get('/loans/halfPay', adminController.halfPaid);
