@@ -9,7 +9,7 @@ We live in a world where money is not always available but our needs never go on
   which are all achieved by money. QuickCredit was created to help our clients to keep pushing through life even when money decreases. That is why we provide even the smallest of loans 
   in the fastest time. 
 <br><br>
-This site is published at https://kessyy.github.io/quickCredit/UI/index.html
+This site is published at https://kessyy.github.io/quickCredit1/UI/index.html
 <br><br>
 <strong>Features</strong><br>
 <ul>
