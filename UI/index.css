@@ -2,6 +2,8 @@ body
 {
     height: 100%;
     /* width: 100%; */
+    background-position: center center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-origin: content-box;
@@ -43,24 +45,17 @@ body
     margin: 0 10px;
 }
 
-#Layer1 {
+/* #Layer1 {
 	position:absolute;
 	left:100px;
 	top:60px;
 	width:300px;
-	/* height:100px; */
-    z-index:1;
-}
-.style1 {font-size: 80px;}
-.style2 {font-size: 50px;}
-/* #Layer2{
-    position:absolute;
-    left:1000px;
-    top:15px;
-    width:280px;
-    height:50px;
+	height:100px;
     z-index:1;
 } */
+.style1 {font-size: 80px;}
+.style2 {font-size: 50px;}
+
 #Layer3{
     position:absolute;
     font-size: 18px;
@@ -75,14 +70,14 @@ body
 	left:100px;
     bottom: 0;
 }
-#Layer5{
+/* #Layer5{
     position:absolute;
     left:500px;
     top:20px;
     width:500px;
     z-index:2;
-}
-
+} */
+/* 
 #Layer7 {
     position:absolute;
     left:155px;
@@ -90,7 +85,7 @@ body
     width:350px;
     height:100px;
     z-index:1;
-}
+} */
 input[type=number], select {
     width: 70%;
     padding: 12px 20px;
@@ -187,8 +182,9 @@ body {
     height: 0px;
   }
   .nav > #nav-check:checked ~ .nav-links {
-    height: calc(100vh - 50px);
-    overflow-y: auto;
+    /* height: calc(100vh - 50px); */
+    height: 150px;
+    /* overflow-y: auto; */
   }
 #Layer1{
     display: none;
@@ -196,6 +192,7 @@ body {
 #Layer3{
     width: 100%;
     left: 0;
+    /* top: 150px; */
 }
 #Layer4{
     width: 100%;
