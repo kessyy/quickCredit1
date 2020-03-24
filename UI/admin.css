@@ -1,38 +1,50 @@
 @charset "utf-8";
 body, html {
-height: 100%;
+  height: 100%;
+  /* width: 100%; */
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-origin: content-box;
+  background-blend-mode: lighten;
+  background-image: url('download.jpg');
 }
 
-.header {
+/* .header {
   text-align: center;
   background: white;
-}
-
-
+} */
 .menu {
-    background-color: rgb(132, 123, 123);
-    text-align: right;
-    line-height: 70px;
+  /* background-color: rgb(132, 123, 123); */
+  text-align: right;
+  line-height: 70px;
 }
-
 .menu a {
-    text-decoration: none;
-    color: rgb(226, 224, 224);
-    margin: 0 10px;
+  text-decoration: none;
+  color: rgb(226, 224, 224);
+  margin: 0 10px;
 }
 .menu a:visited {
-    text-decoration: none;
-    color: blue;
-    margin: 0 10px;
+  text-decoration: none;
+  color: blue;
+  margin: 0 10px;
 }
 a:hover {
   color: rgb(58, 178, 248);
   background-color: #FFFFFF;
 }
-
+.history {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-20%);
+  -webkit-transform: translate(-50%, -20%);
+  transform: translate(-50%, -20%);
+}
 table {
   border-collapse: collapse;
-  max-width: 85%;
+  width: 100%;
   display: inline-block;
   margin: 20px auto;
   background-color: #FFFFFF;
@@ -49,6 +61,7 @@ td {
 
 tr {
   border-bottom: #e8e9ef solid thin;
+  width: 100%;
 }
 
 .badge-status {
@@ -99,24 +112,73 @@ tr {
 .menu{
   text-align: center;
   width: 100%;
+  
 }
 }
 @media screen and (max-width: 800px){
 a.mylink{
-  display:block;
+  /* display:block; */
+  display: none;
 }
 .menu{
     text-align: center;
     width: 100%;
+    display: none;
+}
+table {
+  border: 0;
+}
+
+table caption {
+  font-size: 1.3em;
+}
+
+table thead {
+  border: none;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+table tr {
+  border-bottom: 3px solid #ddd;
+  display: block;
+  margin-bottom: .625em;
+}
+
+table td {
+  border-bottom: 1px solid #ddd;
+  display: block;
+  font-size: .8em;
+  text-align: right;
+}
+
+table td::before {
+  content: attr(data-label);
+  float: left;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+table td:last-child {
+  border-bottom: 0;
 }
 }
 @media screen and (max-width: 400px){
   a.mylink{
-    display:block;
+    display:none;
 }
 .menu{
     text-align: center;
     width: 100%;
+    display: none;
+}
+.table-container {
+  width: 100%;
 }
 }
 
