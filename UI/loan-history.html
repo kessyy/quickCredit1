@@ -3,30 +3,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>loan history</title>
-    <link href="signup.css" type="text/css" rel="stylesheet"/>
+    <title>Quick Credit</title>
+    <link href="admin.css" type="text/css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="favicon.ico" />
 </head>
 <body>
-    <div class="Layer5">
-        <table>
-            <tr>
-                <th>loan requested</th>
-                <th>Amount paid</th>
-                <th>Pending</th>
-            </tr>
-            <tr>
-                <td>2000000</td>
-                <td>2000000</td>
-                <td>0</td>
-            </tr>
-            <tr>
-                <td>500000</td>
-                <td>400000</td>
-                <td>100000</td>
-            </tr>
-        </table>
-            <button value="OK" onclick="window.location.href='welcome.html';"></a>OK</button> 
-    </div>
+    <!-- <div class="header">
+        <div class="menu">
+            <a class ="mylink" href="index.html">Home</a>
+            <a class ="mylink" href="index.html">Sign Out</a>
+        </div> -->
+    <table class ="history">
+        <thead>
+        <tr>
+            <th scope="col">Loan amount</th>
+            <th scope="col">Instalments</th>
+            <th scope="col">Amount paid</th>
+            <th scope="col">Amount Pending</th>
+        </tr>
+        </thead>
+        <tr>
+            <td data-label="Loan amount">2,000,000.00</td>
+            <td data-label="Instalments">500,000.00</td>
+            <td data-label="Amount paid">00</td>
+            <td data-label="Amount Pending">00</td>
+        </tr>
+        <tr>
+            <td data-label="Loan amount">500,000.00</td>
+            <td data-label="Instalments">100,000.00</td>
+            <td data-label="Amount paid">300,000.00</td>
+            <td data-label="Amount Pending">200,000.00</td>
+        </tr>
+    </table>
 </body>
 </html>
 
