@@ -3,25 +3,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign up</title>
+    <title>Quick Credit</title>
     <link href="signup.css" type="text/css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="favicon.ico" />
 </head>
 <body>
-    <div class="header">
-        <div class="menu">
-        <a class ="mylink" href="index.html">Home</a>
-        <a class ="mylink" href="login.html">Login</a>
-        <a class= "mylink" href ="admin.html">Admin</a>
-    </div>
-    <div class="Layer5">
-        <form action="welcome.html">
-            <h2>Sign Up</h2>
-            Enter Email address: <br>
+<div class="Layer5" id ="signup">
+    <form action="welcome.html">
+        <h2>Sign Up</h2>
+            Email: <br>
                 <input type="text" placeholder="Enter Email" name="email" required></br></br>
-            First Name: <br>
-                <input type="text" placeholder="Enter First name" name="fname" required></br></br>
-            Last Name: <br>
-                <input type="text" placeholder="Enter Last name" name="lname" required></br></br>
+            Name: <br>
+                <input type="text" placeholder="Enter Full name" name="fname" required></br></br>
+            <!-- Last Name: <br>
+                <input type="text" placeholder="Enter Last name" name="lname" required></br></br> -->
             Work Address: <br>
                 <input type="text" placeholder="Enter Address" name="address" required></br></br>
             Enter Password: <br>
@@ -29,8 +24,30 @@
             Confirm password: <br>
                 <input type="password" placeholder="Confirm Password" name="psw-repeat" required></br></br>
                 <input type="submit" value="SUMBIT"></form>
-                <p>Already have an account? <a href="login.html">Login</a></p>
+            <p>Already have an account 
+                <a href ="#form" onclick="signIn()">SIGN IN</a></p>
                   
-    </div>
+</div>
+<div id="form">
+    <form action="welcome.html">
+        <h2>Log In</h2>
+        Enter Email: <br>
+            <input type="text" placeholder="Enter Email" name="email" required></br></br>
+        Password: <br>
+            <input type="password" placeholder="Enter Password" name="psw" required></br></br>
+            <input type="submit" value="SUMBIT">
+    </form>
+    <p>Do not have an account <a href ="#signup" onclick="signUp()">SIGN UP</a></p>
+</div>
+<script>
+    function signUp() {
+     document.getElementById('signup').setAttribute('style', 'display:block');
+     document.getElementById('form').setAttribute('style', 'display:none');
+     };
+    function signIn(){
+     document.getElementById('form').setAttribute('style', 'display:block');
+     document.getElementById('signup').setAttribute('style', 'display:none');
+    }
+</script>
 </body>
 </html>

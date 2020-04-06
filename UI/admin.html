@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>Quick Credit</title>
     <link rel="stylesheet" type="text/css" href="admin.css">
+    <link rel="shortcut icon" href="favicon.ico" />
     <script src="admin.js">
     </script>
 </head>
@@ -14,15 +15,14 @@
             <a class ="mylink" href="index.html">Home</a>
             <a class ="mylink" href="index.html">Sign Out</a>
         </div>
+    </div>
     <section>
         <div>
-
             <div class="admin-control-panel-container">
                     <button class="admin-tab" onclick="openAdminManageTab(event, 'all-loans')">All loans</button>
                     <button class="admin-tab" onclick="openAdminManageTab(event, 'paid-loans')">Paid loan</button>
                     <button class="admin-tab" onclick="openAdminManageTab(event, 'unpaid-loans')">Unpaid loans</button>
                 </div>
-            </header>
         </div>
     </section>
 
@@ -30,33 +30,50 @@
         <section class="data-tables">
             <div class="table-container reports-table">
                 <table>
+                <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>Names</th>
-                        <th>Address</th>
-                        <th>Loan amount</th>
-                        <th>Instalments</th>
-                        <th>Amount paid</th>
-                        <th>Amount Pending</th>
-                        <th>Status</th>
-                        <th>Verified</th>
-                        <th>View</th>
+                        <th scope="col">Id</th>
+                        <th scope="col">User</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Instalments</th>
+                        <th scope="col">Amount paid</th>
+                        <th scope="col">Balance</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Verified</th>
+                        <th scope="col">View</th>
                     </tr>
+                    </thead>
                     <tr>
-                        <td>1</td>
-                        <td>Karungi Esther</td>
-                        <td>Kampala</td>
-                        <td>2,000,000.00</td>
-                        <td>500,000.0</td>
-                        <td>1,000,000.00</td>
-                        <td>1,000,000.00</td>
-                        <td><span class="badge-status"><select>
+                        <td data-label="Id">1</td>
+                        <td data-label="User">Karungi Esther</td>
+                        <td data-label="Address">Kampala</td>
+                        <td data-label="Amount">2,000,000.00</td>
+                        <td data-label="Instalments">500,000.0</td>
+                        <td data-label="Amount paid">1,000,000.00</td>
+                        <td data-label="Balance">1,000,000.00</td>
+                        <td data-label="Status"><span class="badge-status"><select>
                                     <option value="Approved">Approved</option>
                                     <option value="Denied">Denied</option>
                                 </select></span> </td>
-                        <td><form><input type="checkbox" value="Verified">Verified</td>
-                        <td><input id="myBtn" type="button" value="view"/></td>
+                        <td data-label="Verified"><form><input type="checkbox" value="Verified">Verified</td>
+                        <td data-label="View"><input id="myBtn" type="button" value="view"/></td>
                     </tr>
+                    <tr>
+                        <td data-label="Id">2</td>
+                        <td data-label="User">Jane Doe</td>
+                        <td data-label="Address">Kigali</td>
+                        <td data-label="Amount">5,000.00</td>
+                        <td data-label="Instalments">1,000.00</td>
+                        <td data-label="Amount paid">0.00</td>
+                        <td data-label="Balance">5,000.00</td>
+                        <td data-label="Status"><span class="badge-status"><select>
+                                <option value="Approved">Approved</option>
+                                <option value="Denied">Denied</option>
+                            </select></span> </td>
+                        <td data-label="Verified"><form><input type="checkbox" value="Verified">Verified</td>
+                        <td data-label="View"><input id="myBtn" type="button" value="view"/></td>
+                        </tr>
 
                 </table>
             </div>
@@ -64,15 +81,17 @@
             <div class="table-container reports-summary-table">
                 <h3> All loans summary</h3>
                 <table>
+                    <thead>
                     <tr>
                         <th>Approved</th>
                         <th>Rejected</th>
                         <th>Total</th>
                     </tr>
+                </thead>
                     <tr>
-                        <td>1</td>
-                        <td>0</td>
-                        <td>1</td>
+                        <td data-label="Approved">1</td>
+                        <td data-label="Reject">0</td>
+                        <td data-label="Total">2</td>
                     </tr>
 
                 </table>
@@ -84,30 +103,48 @@
         <section class="data-tables">
             <div class="table-container reports-table">
                 <table>
+                    <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>Address</th>
-                        <th>Loan Amount</th>
-                        <th>Instalment</th>
-                        <th>Amount paid</th>
-                        <th>Amount pending</th>
-                        <th>Status</th>
-                        <th>Verified</th>
+                        <th scope="col">Id</th>
+                        <th scope="col">User</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Instalments</th>
+                        <th scope="col">Amount paid</th>
+                        <th scope="col">Balance</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Verified</th>
                     </tr>
+                    </thead>
                     <tr>
-                        <td>1</td>
-                        <td>Karungi Esther</td>
-                        <td>kampala</td>
-                        <td>2,000,000.00</td>
-                        <td>500,000</td>
-                        <td>1,000,000.00</td>
-                        <td>1,000,000.00</td>
-                        <td><span class="badge-status"><select>
+                        <td data-label="Id">1</td>
+                        <td data-label="User">Karungi Esther</td>
+                        <td data-label="Address">kampala</td>
+                        <td data-label="Amount">2,000,000.00</td>
+                        <td data-label="Instalments">500,000</td>
+                        <td data-label="Amount paid">1,000,000.00</td>
+                        <td data-label="Balance">1,000,000.00</td>
+                        <td data-label="Status"><span class="badge-status"><select>
                             <option value="Approved">Approved</option>
                             <option value="Denied">Denied</option>
                         </select></span> </td>
-                <td><form><input type="checkbox" value="Verified">Verified</td>
+                        <td data-label="Verified"><form><input type="checkbox" value="Verified">Verified</form></td>
+                        <td data-label="View"><input id="myBtn" type="button" value="view"/></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Id">2</td>
+                        <td data-label="User">Jane Doe</td>
+                        <td data-label="Address">Kigali</td>
+                        <td data-label="Amount">5,000.00</td>
+                        <td data-label="Instalments">1,000.00</td>
+                        <td data-label="Amount paid">0.00</td>
+                        <td data-label="Balance">5,000.00</td>
+                        <td data-label="Status"><span class="badge-status"><select>
+                                <option value="Approved">Approved</option>
+                                <option value="Denied">Denied</option>
+                        </select></span> </td>
+                        <td data-label="Verified"><form><input type="checkbox" value="Verified">Verified</form></td>
+                        <td data-label="View"><input id="myBtn" type="button" value="view"/></td>
                     </tr>
 
                 </table>
@@ -116,11 +153,13 @@
              <div class="table-container reports-summary-table">
                 <h3>paid loans suummary</h3>
                 <table>
+                    <thead>
                     <tr>
                         <th>Total</th>
                     </tr>
-                    <tr>
-                        <td>1</td>
+                    </thead>
+                    <tr data-label="Total">
+                        <td>2</td>
                     </tr>
 
                 </table>
@@ -132,30 +171,48 @@
         <section class="data-tables">
             <div class="table-container reports-table">
                 <table>
+                    <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>Names</th>
-                        <th>Address</th>
-                        <th>Loan amount</th>
-                        <th>Instalments</th>
-                        <th>Amount paid</th>
-                        <th>Amount Pending</th>
-                        <th>Status</th>
-                        <th>Verified</th>
+                        <th scope="col">Id</th>
+                        <th scope="col">User</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Instalments</th>
+                        <th scope="col">Amount paid</th>
+                        <th scope="col">Balance</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Verified</th>
                     </tr>
+                    </thead>
                     <tr>
-                        <td>1</td>
-                        <td>Karungi Esther</td>
-                        <td>Kampala</td>
-                        <td>2,000,000.00</td>
-                        <td>500,000.0</td>
-                        <td>1,000,000.00</td>
-                        <td>1,000,000.00</td>
-                        <td><span class="badge-status"><select>
+                        <td data-label="Id">1</td>
+                        <td data-label="User">Karungi Esther</td>
+                        <td data-label="Address">Kampala</td>
+                        <td data-label="Amount">2,000,000.00</td>
+                        <td data-label="Instalments">500,000.0</td>
+                        <td data-label="Amount paid">1,000,000.00</td>
+                        <td data-label="Balance">1,000,000.00</td>
+                        <td data-label="Status"><span class="badge-status"><select>
                                     <option value="Approved">Approved</option>
                                     <option value="Denied">Denied</option>
                                 </select></span> </td>
-                        <td><form><input type="checkbox" value="Verified">Verified</td>
+                        <td data-label="Verified"><form><input type="checkbox" value="Verified">Verified</form></td>
+                        <td data-label="View"><input id="myBtn" type="button" value="view"/></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Id">2</td>
+                        <td data-label="User">Jane Doe</td>
+                        <td data-label="Address">Kigali</td>
+                        <td data-label="Amount">5,000.00</td>
+                        <td data-label="Instalments">1,000.00</td>
+                        <td data-label="Amount paid">0.00</td>
+                        <td data-label="Balance">5,000.00</td>
+                        <td data-label="Status"><span class="badge-status"><select>
+                                <option value="Approved">Approved</option>
+                                <option value="Denied">Denied</option>
+                            </select></span> </td>
+                        <td data-label="Verified"><form><input type="checkbox" value="Verified">Verified</form></td>
+                        <td data-label="View"><input id="myBtn" type="button" value="view"/></td>
                     </tr>
                 </table>
             </div>
